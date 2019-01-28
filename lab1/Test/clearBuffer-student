@@ -1,0 +1,5 @@
+Test clearBuffer...
+Testing clearBuffer(u.x16,2): ffffffffffff0000
+Testing clearBuffer(u.y32,4): ffffffff00000000
+Testing clearBuffer(u.ww5,5): ffffff0000000000
+Testing clearBuffer(u.z64,8): 0000000000000000

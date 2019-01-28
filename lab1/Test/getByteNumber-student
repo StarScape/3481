@@ -1,0 +1,9 @@
+Test getByteNumber...
+getByteNumber(0,123456789abcdef): ef
+getByteNumber(1,123456789abcdef): cd
+getByteNumber(2,123456789abcdef): ab
+getByteNumber(3,123456789abcdef): 89
+getByteNumber(4,123456789abcdef): 67
+getByteNumber(5,123456789abcdef): 45
+getByteNumber(6,123456789abcdef): 23
+getByteNumber(7,123456789abcdef): 01
