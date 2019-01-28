@@ -34,3 +34,6 @@
 # Ignore lab1 and lab2 dirs since they aren't team projects
 /lab1
 /lab2
+
+# Ignore .tar files
+*.tar
