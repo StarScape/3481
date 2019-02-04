@@ -34,6 +34,8 @@
 # Ignore lab1 and lab2 dirs since they aren't team projects
 /lab1
 /lab2
+/y86bootcamp
+/ignored
 
 # Ignore .tar files
 *.tar

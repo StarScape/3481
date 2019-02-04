@@ -1,0 +1,267 @@
+0x000:              
+0x000:    irmovq    $0x200, %rsp
+0x00a:    call      0x38
+0x013:    halt      
+0x018:              
+0x018:    .quad     0x0000000d000d000d
+0x020:    .quad     0xffffff3fff3fff40
+0x028:    .quad     0x00000b000b000b00
+0x030:    .quad     0xffff5fff5fff6000
+0x038:              
+0x038:    irmovq    $0x18, %rdi
+0x042:    irmovq    $0x4, %rsi
+0x04c:    call      0x56
+0x055:    ret       
+0x056:              
+0x056:    irmovq    $0x8, %r8 
+0x060:    irmovq    $0x1, %r9 
+0x06a:    xorq      %rax, %rax
+0x06c:    andq      %rsi, %rsi
+0x06e:    jmp       0x8d
+0x077:              
+0x077:    mrmovq    $0x0(%rdi), %r10
+0x081:    xorq      %r11, %r11
+0x083:    subq      %r10, %r11
+0x085:    cmovg     %r11, %r10
+0x087:    addq      %r10, %rax
+0x089:    addq      %r8 , %rdi
+0x08b:    subq      %r9 , %rsi
+0x08d:              
+0x08d:    jne       0x77
+0x096:    ret       
+0x200:              
+0x200:              
+0x000:              
+0x000:    irmovq    $0x200, %rsp
+0x00a:    call      0x38
+0x013:    halt      
+0x018:              
+0x018:    .quad     0x0000000d000d000d
+0x020:    .quad     0xffffff3fff3fff40
+0x028:    .quad     0x00000b000b000b00
+0x030:    .quad     0xffff5fff5fff6000
+0x038:    irmovq    $0x18, %rdi
+0x042:    irmovq    $0x4, %rsi
+0x04c:    call      0x56
+0x055:    ret       
+0x056:              
+0x056:    irmovq    $0x8, %r8 
+0x060:    irmovq    $0x1, %r9 
+0x06a:    xorq      %rax, %rax
+0x06c:    andq      %rsi, %rsi
+0x06e:    jmp       0x96
+0x077:              
+0x077:    mrmovq    $0x0(%rdi), %r10
+0x081:    xorq      %r11, %r11
+0x083:    subq      %r10, %r11
+0x085:    jle       0x90
+0x08e:    rrmovq    %r11, %r10
+0x090:              
+0x090:    addq      %r10, %rax
+0x092:    addq      %r8 , %rdi
+0x094:    subq      %r9 , %rsi
+0x096:              
+0x096:    jne       0x77
+0x09f:    ret       
+0x200:              
+0x200:              
+0x000:              
+0x000:    irmovq    $0x100, %rsp
+0x00a:    call      0x38
+0x013:    halt      
+0x018:              
+0x018:    .quad     0x0000000d000d000d
+0x020:    .quad     0x000000c000c000c0
+0x028:    .quad     0x00000b000b000b00
+0x030:    .quad     0x0000a000a000a000
+0x038:    irmovq    $0x18, %rdi
+0x042:    irmovq    $0x4, %rsi
+0x04c:    call      0x56
+0x055:    ret       
+0x056:              
+0x056:    xorq      %rax, %rax
+0x058:    andq      %rsi, %rsi
+0x05a:    jmp       0x83
+0x063:              
+0x063:    mrmovq    $0x0(%rdi), %r10
+0x06d:    addq      %r10, %rax
+0x06f:    illegal op
+0x079:    illegal op
+0x083:              
+0x083:    jne       0x63
+0x08c:    ret       
+0x100:              
+0x100:              
+0x000:              
+0x000:    irmovq    $0x200, %rsp
+0x00a:    call      0x38
+0x013:    halt      
+0x018:              
+0x018:    .quad     0x0000000d000d000d
+0x020:    .quad     0x000000c000c000c0
+0x028:    .quad     0x00000b000b000b00
+0x030:    .quad     0x0000a000a000a000
+0x038:    irmovq    $0x18, %rdi
+0x042:    irmovq    $0x4, %rsi
+0x04c:    call      0x56
+0x055:    ret       
+0x056:    irmovq    $0x8, %r8 
+0x060:    irmovq    $0x1, %r9 
+0x06a:    xorq      %rax, %rax
+0x06c:    andq      %rsi, %rsi
+0x06e:    jmp       0x87
+0x077:    mrmovq    $0x0(%rdi), %r10
+0x081:    addq      %r10, %rax
+0x083:    addq      %r8 , %rdi
+0x085:    subq      %r9 , %rsi
+0x087:    jne       0x77
+0x090:    ret       
+0x200:              
+0x200:              
+0x000:              
+0x000:    irmovq    $0x200, %rsp
+0x00a:    call      0x38
+0x013:    halt      
+0x018:              
+0x018:    .quad     0x0000000d000d000d
+0x020:    .quad     0x000000c000c000c0
+0x028:    .quad     0x00000b000b000b00
+0x030:    .quad     0x0000a000a000a000
+0x038:    irmovq    $0x18, %rdi
+0x042:    irmovq    $0x4, %rsi
+0x04c:    call      0x56
+0x055:    ret       
+0x056:              
+0x056:    xorq      %rax, %rax
+0x058:    andq      %rsi, %rsi
+0x05a:    je        0x94
+0x063:    pushq     %rbx
+0x065:    mrmovq    $0x0(%rdi), %rbx
+0x06f:    irmovq    $0xffffffffffffffff, %r10
+0x079:    addq      %r10, %rsi
+0x07b:    irmovq    $0x8, %r10
+0x085:    addq      %r10, %rdi
+0x087:    call      0x56
+0x090:    addq      %rbx, %rax
+0x092:    popq      %rbx
+0x094:              
+0x094:    ret       
+0x200:              
+0x200:              
+0x000:    irmovq    $0x40, %rsp
+0x00a:    irmovq    $0x38, %rax
+0x014:    pushq     %rax
+0x016:    xorq      %rax, %rax
+0x018:    jne       0x2c
+0x021:    irmovq    $0x1, %rax
+0x02b:    halt      
+0x02c:    ret       
+0x02d:    irmovq    $0x2, %rbx
+0x037:    halt      
+0x038:    irmovq    $0x3, %rdx
+0x042:    halt      
+0x040:              
+0x040:              
+0x000:    irmovq    $0x1, %rsi
+0x00a:    irmovq    $0x2, %rdi
+0x014:    irmovq    $0x4, %rbp
+0x01e:    irmovq    $0xffffffffffffffe0, %rax
+0x028:    irmovq    $0x40, %rdx
+0x032:    subq      %rdx, %rax
+0x034:    je        0x3f
+0x03d:    nop       
+0x03e:    halt      
+0x03f:              
+0x03f:    addq      %rsi, %rdx
+0x041:    nop       
+0x042:    nop       
+0x043:    nop       
+0x044:    halt      
+0x000:    irmovq    $0x100, %rsp
+0x00a:    irmovq    $0xabcd, %rax
+0x014:    pushq     %rax
+0x016:    popq      %rsp
+0x018:    halt      
+0x000:    irmovq    $0x1, %rax
+0x00a:    xorq      %rsp, %rsp
+0x00c:    pushq     %rax
+0x00e:    addq      %rax, %rax
+0x010:    irmovq    $0x2, %rax
+0x01a:    irmovq    $0x3, %rax
+0x000:    irmovq    $0xa, %rdx
+0x00a:    irmovq    $0x3, %rax
+0x014:    nop       
+0x015:    nop       
+0x016:    nop       
+0x017:    addq      %rdx, %rax
+0x019:    halt      
+0x000:    irmovq    $0xa, %rdx
+0x00a:    irmovq    $0x3, %rax
+0x014:    nop       
+0x015:    nop       
+0x016:    addq      %rdx, %rax
+0x018:    halt      
+0x000:    irmovq    $0xa, %rdx
+0x00a:    irmovq    $0x3, %rax
+0x014:    nop       
+0x015:    addq      %rdx, %rax
+0x017:    halt      
+0x000:    irmovq    $0xa, %rdx
+0x00a:    irmovq    $0x3, %rax
+0x014:    addq      %rdx, %rax
+0x016:    halt      
+0x000:    irmovq    $0x80, %rdx
+0x00a:    irmovq    $0x3, %rcx
+0x014:    rmmovq    %rcx, $0x0(%rdx)
+0x01e:    irmovq    $0xa, %rbx
+0x028:    mrmovq    $0x0(%rdx), %rax
+0x032:    addq      %rbx, %rax
+0x034:    halt      
+0x000:    irmovq    $0x30, %rsp
+0x00a:    call      0x20
+0x013:    irmovq    $0xa, %rdx
+0x01d:    halt      
+0x020:              
+0x020:              
+0x020:    ret       
+0x021:    rrmovq    %rdx, %rbx
+0x030:              
+0x030:              
+0x000:    xorq      %rax, %rax
+0x002:    jne       0x16
+0x00b:    irmovq    $0x1, %rax
+0x015:    halt      
+0x016:              
+0x016:    irmovq    $0x2, %rdx
+0x020:    irmovq    $0x3, %rbx
+0x02a:    halt      
+0x000:    irmovq    $0xa, %rdx
+0x00a:    irmovq    $0x3, %rdx
+0x014:    rrmovq    %rdx, %rax
+0x016:    halt      
+0x000:    xorq      %rax, %rax
+0x002:    jne       0x16
+0x00b:    irmovq    $0x1, %rax
+0x015:    halt      
+0x016:              
+0x016:    illegal op
+0x000:    irmovq    $0x100, %rsp
+0x00a:    pushq     %rsp
+0x00c:    popq      %rax
+0x00e:    halt      
+0x000:    irmovq    $0x100, %rsp
+0x00a:    rrmovq    %rsp, %rax
+0x00c:    pushq     %rsp
+0x00e:    popq      %rdx
+0x010:    subq      %rdx, %rax
+0x012:    halt      
+0x000:    irmovq    $0x40, %rbx
+0x00a:    mrmovq    $0x0(%rbx), %rsp
+0x014:    ret       
+0x015:    halt      
+0x016:    irmovq    $0x5, %rsi
+0x020:    halt      
+0x040:              
+0x040:    .quad     0x0000000000000050
+0x050:              
+0x050:    .quad     0x0000000000000016
