@@ -1,18 +1,23 @@
 CXX = g++
-CXXFLAGS = -Wall -g -std=c++11
-OBJ = main.o Disassembler.o Tools.o
+CXXFLAGS = -Wall -ggdb -std=c++11
+OBJ = bin/main.o bin/Disassembler.o bin/Tools.o
 
-build: main.o Tools.o Disassembler.o
-	$(CXX) $(CXXFLAGS) $(OBJ)  -o dis
+build: $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ)  -o y86dis
 
-main.o: src/main.cpp src/Tools.h src/Disassembler.h
-	$(CXX) $(CXXFLAGS) -c src/main.cpp -o main.o
+bin/main.o: src/main.cpp src/Tools.h src/Disassembler.h
+	$(CXX) $(CXXFLAGS) -c src/main.cpp -o bin/main.o
 
-Disassembler.o: src/Disassembler.cpp src/Disassembler.h
-	$(CXX) $(CXXFLAGS) -c src/Disassembler.cpp -o Disassembler.o
+bin/Disassembler.o: src/Disassembler.cpp src/Disassembler.h
+	$(CXX) $(CXXFLAGS) -c src/Disassembler.cpp -o bin/Disassembler.o
 
-Tools.o: src/Tools.cpp src/Tools.h
-	$(CXX) $(CXXFLAGS) -c src/Tools.cpp -o Tools.o
+bin/Tools.o: src/Tools.cpp src/Tools.h
+	$(CXX) $(CXXFLAGS) -c src/Tools.cpp -o bin/Tools.o
+
+test:
+	ls ./Test/*.obj | xargs -n 1 y86dis | tr -d [:blank:] > alloutput
+	ls ./Test/*.obj | xargs -n 1 efbdis | tr -d [:blank:] >  efboutput 
+	diff alloutput efboutput > diffoutput
 
 clean:
 	rm -f *.o

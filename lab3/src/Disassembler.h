@@ -10,6 +10,14 @@
 #include <string>
 
 namespace Disassembler {
+
+    std::string getRegName(int regNum);
+    std::string getRA(std::string instruction);
+    std::string getRB(std::string instruction);
+    std::string getImmediate(std::string instruction);
+    std::string getDest(std::string instruction);
+    int getFn(std::string instruction);
+
     std::string halt(std::string instruction);
     std::string nop(std::string instruction);
     std::string rrmovq(std::string instruction);
@@ -22,6 +30,9 @@ namespace Disassembler {
     std::string ret(std::string instruction);
     std::string pushq(std::string instruction);
     std::string popq(std::string instruction);
+    std::string quad(std::string instruction);
+
+    std::string rrmovqOrCmovxx(std::string instruction);
 }
 
 #endif

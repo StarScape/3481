@@ -8,6 +8,8 @@
 #include <iostream>
 #include <cassert>
 #include <cstdint>
+#include <sstream>
+
 #include "Tools.h"
 
 namespace Tools {
@@ -217,6 +219,43 @@ void clearBuffer(char * pbuf, int size)
         pbuf[i] = (uint8_t) 0;
     } 
     return;
+}
+
+// Takes a string of hex 
+uint64_t hexToInt(std::string hexString)
+{
+    unsigned int hexNum;   
+    std::stringstream ss;
+    ss << std::hex << hexString;
+    ss >> hexNum;
+
+    return hexNum;
+}
+
+std::string intToHex(uint64_t hexNum)
+{
+    std::stringstream ss;
+    ss << std::hex << hexNum;
+    std::string result = ss.str();
+
+    // std::cout << "0x" << result << std::endl;
+
+    return result;
+}
+
+// Reveres the endian-ness of a 
+uint64_t flipEndian(uint64_t source)
+{
+    return buildWord(
+        getByteNumber(7, source),
+        getByteNumber(6, source),
+        getByteNumber(5, source),
+        getByteNumber(4, source),
+        getByteNumber(3, source),
+        getByteNumber(2, source),
+        getByteNumber(1, source),
+        getByteNumber(0, source)
+    );
 }
 
 } // end namespace Y86

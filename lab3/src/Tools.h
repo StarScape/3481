@@ -22,6 +22,10 @@ namespace Tools {
         bool isNegative(uint64_t source);
         void expandBits(uint64_t source, char bits[72]);
         void clearBuffer(char * pbuf, int size);
+
+        uint64_t hexToInt(std::string hexString);
+        std::string intToHex(uint64_t hexString);
+        uint64_t flipEndian(uint64_t source);
 }
 
 #endif
